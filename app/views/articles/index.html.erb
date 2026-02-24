@@ -1,0 +1,10 @@
+<div class="container d-flex align-items-center w-50">
+  <ul class="list-group list-group-flush">
+    <% @articles.each do |article| %>
+      <li class="list-group-item">
+        <h2> <%= link_to article.title, article_path(article), class:"text-decoration-none" %></h2>
+        <p class="fs-4"><%= article.content[0, 60] %>...</p>
+      </li>
+    <% end %>
+  </ul>
+</div>

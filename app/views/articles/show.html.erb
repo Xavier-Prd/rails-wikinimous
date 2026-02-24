@@ -1,0 +1,8 @@
+<div class="container w-50">
+  <div class="title mb-4 border-bottom pb-2">
+    <h1><%= @article.title %></h1>
+    <span><%= link_to "", edit_article_path(@article), class:"fa-solid fa-pen-to-square text-decoration-none fs-2" %></span>
+    <span><%= link_to "", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Tu es sûr de vouloir supprimer cet article ?"}, class:"fa-solid fa-trash text-decoration-none fs-2" %></span>
+  </div>
+  <p class="text-break"><%= @article.content %></p>
+</div>
